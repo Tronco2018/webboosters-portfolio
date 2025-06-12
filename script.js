@@ -1,8 +1,5 @@
-function toggleHamburger(){
-    const hamburger = document.getElementById("menuButton");
+function toggleMenu(){
     const menu = document.getElementById("menu");
-
-    hamburger.addEventListener("click", () =>{
-        menu.classList.toggle("overlayHidden");
-    });
+    menu.classList.toggle("Hidden");
+    console.log("triggered");
 }

@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Menu Overlay</title>
+  <script src="script.js"></script>
 </head>
 <body>
 
   <!-- Bottone per aprire il menu -->
-  <button id="menuButton">Menu</button>
+  <button id="menuButton" onclick="toggleMenu()">Menu</button>
 
   <!-- Menu a sovrapposizione nascosto -->
-  <div id="overlayMenu" class="overlayHidden">
-    <nav>
+  <div id="overlayMenu" class="overlay Hidden">
+    <nav id="menu">
       <ul>
         <li><a href="index.html">1. Home</a></li>
         <li><a href="chi-siamo.html">2. Chi siamo</a></li>
