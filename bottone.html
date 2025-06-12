@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+  <link rel="stylesheet" href="styles.css">
   <meta charset="UTF-8">
-  <title>Menu Overlay</title>
-  <script src="script.js"></script>
+  <title>Menu con dissolvenza</title>
 </head>
-  <style>
-    .hidden{
-      display: none;
-    }
-  </style>
 <body>
 
-  <!-- Bottone per aprire il menu -->
-  <button id="menuButton" onclick="toggleMenu()">Menu</button>
+  <!-- Bottone -->
+  <button id="menuButton">Menu</button>
 
-  <!-- Menu a sovrapposizione nascosto -->
-  <div id="overlayMenu" class="overlay hidden">
-    <nav id="menu">
+  <!-- Menu overlay -->
+  <div id="overlayMenu" class="overlay">
+    <nav>
       <ul>
-        <li><a href="index.html">1. Home</a></li>
-        <li><a href="chi-siamo.html">2. Chi siamo</a></li>
-        <li><a href="i-nostri-lavori.html">3. I nostri lavori</a></li>
-        <li><a href="index.html#contatti">4. Contatti</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chi-siamo.html">Chi siamo</a></li>
+        <li><a href="lavori.html">I nostri lavori</a></li>
+        <li><a href="#contatti">Contatti</a></li>
       </ul>
     </nav>
-    </div>
-    <div class="info-contatti">
-      <p>Email: marketing.webboosters@outlook.com</p>
-      <p>Telefono: +39 338 359 1866 (provvisorio)</p>
-    </div>
-  
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const menuBtn = document.getElementById("menuButton");
+    const overlay = document.getElementById("overlayMenu");
+
+    menuBtn.addEventListener("click", () => {
+      overlay.classList.toggle("show");
+    });
+  </script>
 
 </body>
 </html>
