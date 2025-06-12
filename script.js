@@ -1,5 +1,4 @@
 function toggleMenu(){
-    const menu = document.getElementById("menu");
-    menu.classList.toggle("Hidden");
-    console.log("triggered");
+    const menu = document.getElementById("overlayMenu");
+    menu.classList.toggle("hidden");
 }

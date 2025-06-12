@@ -5,13 +5,18 @@
   <title>Menu Overlay</title>
   <script src="script.js"></script>
 </head>
+  <style>
+    .hidden{
+      display: none;
+    }
+  </style>
 <body>
 
   <!-- Bottone per aprire il menu -->
   <button id="menuButton" onclick="toggleMenu()">Menu</button>
 
   <!-- Menu a sovrapposizione nascosto -->
-  <div id="overlayMenu" class="overlay Hidden">
+  <div id="overlayMenu" class="overlay hidden">
     <nav id="menu">
       <ul>
         <li><a href="index.html">1. Home</a></li>
@@ -20,11 +25,12 @@
         <li><a href="index.html#contatti">4. Contatti</a></li>
       </ul>
     </nav>
+    </div>
     <div class="info-contatti">
       <p>Email: marketing.webboosters@outlook.com</p>
       <p>Telefono: +39 338 359 1866 (provvisorio)</p>
     </div>
-  </div>
+  
 
 </body>
 </html>
