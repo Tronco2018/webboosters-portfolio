@@ -1,16 +1,52 @@
-<html>
-    <body>
-        <h1>WebBooster</h1>
-        <nav>
-            <ul>
-                <li> <a href="index.html">Home</a></li>
-                <li> <a href="Chi siamo.html">Chi siamo</a></li>
-                <li> <a href="Contatti.html">Contatti</a></li>
-                <li> <a href="I nostri lavori.html">I nostri lavori</a></li>
-            </ul>
-        </nav>
-        <main>
-            <p>Laudiciola</p>
-        </main>
-    </body>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" class:"icona" href="Screenshot_2025-06-13_160227-removebg-preview.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>webbooster</title>
+</head>
+<body>
+  <div class="cerchio-2"></div>
+  <div class="cerchio-1"></div>
+  <div class="shape"></div>
+  <div class="purple-shape"></div>
+  <h2 class="b">Build Your Website</h2>
+  <h2 class="w">With Us</h2>
+  <p class="frase-moti">We build fantastic websites at the best price</p>
+  <img src="Screenshot_2025-06-13_154951-removebg-preview (1).png">
+  <div class="rettangolo"></div>
+  <h1>WebBooster</h1>
+  
+
+  <!-- Bottone -->
+  <button id="menuButton">Discover</button>
+  <button class="bottone-contattaci">Get Started</button>
+
+  <!-- Menu overlay -->
+  <div id="overlayMenu" class="overlay">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chi-siamo.html">Chi siamo</a></li>
+        <li><a href="lavori.html">I nostri lavori</a></li>
+
+      </ul>
+    </nav>
+  </div>
+  
+  <script>
+    const menuBtn = document.getElementById("menuButton");
+    const overlay = document.getElementById("overlayMenu");
+
+    menuBtn.addEventListener("click", () => {
+      overlay.classList.toggle("show");
+    });
+
+    document.querySelectorAll('.linea').forEach(line => {
+      line.classList.add('show');
+    });
+  </script>
+</body>
 </html>

@@ -1,57 +1,222 @@
-    /* Bottone menu */
+   
+   body{
+  min-width: 1920px; /* Imposta una larghezza minima per evitare adattamenti */
+  min-height: 1080px; /* Se necessario, imposta una altezza minima */
+  overflow-x: auto; /* Abilita lo scorrimento orizzontale se lo schermo è più piccolo */
+    background-color: rgba(40,25,54,255);
+    overflow-x: hidden;
+   }
+   
+   .purple-shape {
+    width: 1960px; 
+    height: 505px;
+    background: linear-gradient( #6c54a8); 
+    position: absolute;
+    top:800px; 
+    left: 600px;
+    border-radius: 1000px 0px 0px 1000px;
+    
+    
+}
+.bottone-contattaci{
+  position: absolute;
+  top: 670px;
+  left: 100px;
+  font-size: 30px;
+  border-radius: 15px;
+  width: 190px;
+  height: 80px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  background-color: #7054a4;
+  border:0;
+  color: white;
+ 
+
+}
+
+.shape{
+   width: 2544px; 
+    height: 300px;
+    background-color: #b094e4;
+    position: absolute;
+    top:1000px; 
+    left: 0px;
+    z-index: -1;
+}
+
+   
+    .b {
+    position: absolute;
+    top: 24%; 
+    left: 2%; 
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segone UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80px;
+}
+.w{
+    position: absolute;
+    top: 30%; 
+    left: 2.2%; 
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segone UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80px;
+}
+
+   
+   .Contatti{
+    padding-top: 850px;
+    color: #1a1a1a;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segone UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+   }
+   .frase-moti{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    color: white;
+    font-weight: 500;
+    padding-top:500px ;
+    position: absolute;
+    padding-left: 60px;
+   }
+  img{
+    position: absolute; 
+    top: 55%; 
+    left: 54%; 
+    transform: translate(-50%, -50%); 
+    width: 700px; 
+    height: auto; 
+  }
+.cerchio-1 {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  background-color: #704c94;
+  left: 2000px;
+  top: -400px;
+  border-radius: 50%;
+  clip-path: inset(0 400px 0 0px); /* Taglia sia a sinistra che a destra */
+}
+
+
+
+ .cerchio-2 {
+  position: absolute; /* Permette di posizionarlo in modo preciso */
+  width: 250px;
+  height: 250px;
+  background-color: #704c94;
+  left: -100px;
+    top: 420px;
+  border-radius: 50% ;
+ }
+
+   h1{
+    color: rgb(255, 255, 255);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segone UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-size:60px;
+    padding-left: 50px;
+    margin-top: 50px;
+    
+    
+   }
+  
     #menuButton {
-      position: fixed;
-      top: 20px;
-      right: 20px;
+      position:absolute;
+      top: 60px;
+      right: 80px;
       z-index: 1100;
-      padding: 10px 20px;
-      font-size: 18px;
       cursor: pointer;
-      background-color: #333;
+      background: transparent;
+    border: none;
+    padding: 0;
+    font-size: 28px;
       color: white;
-      border: none;
-      border-radius: 5px;
+      margin-top: 27px;
+      margin-right: 1870px;
+      font-weight: 600;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segone UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      
     }
+    #menuButton::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+}
 
-    /* Overlay menu */
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.95);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.4s ease, visibility 0.4s ease;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
 
-    .overlay.show {
-      opacity: 1;
-      visibility: visible;
-    }
+#menuButton:hover::after {
+    width: 100%;
+}
 
-    /* Stile del menu */
-    nav ul {
-      list-style: none;
-      text-align: center;
-      padding: 0;
-    }
+ 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.788); 
+  backdrop-filter: blur(10px); 
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 0;
+}
 
-    nav ul li {
-      margin: 20px 0;
-    }
 
-    nav ul li a {
-      font-size: 24px;
-      color: white;
-      text-decoration: none;
-    }
 
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+  
+}
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+
+nav ul li {
+  margin: 40px 0; 
+}
+
+nav ul li a {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%; 
+  bottom: -5px; 
+  width: 0;
+  height: 4px;
+  background-color: white;
+  transition: all 0.4s ease;
+  transform: translateX(-50%); 
+}
+
+
+nav ul li a:hover::after {
+  width: 100%; 
+}
