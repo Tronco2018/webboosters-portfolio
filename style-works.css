@@ -4,103 +4,9 @@ body {
   background-color: rgba(40,25,54,255);
   overflow-x: hidden; /* Evita lo scorrimento orizzontale */
   position: relative;
+  overflow-y: hidden;
 }
-
-.purple-shape {
-  width: 1960px; 
-  height: 505px;
-  background: linear-gradient(#6c54a8); 
-  position: absolute;
-  top: 800px; 
-  left: 600px;
-  border-radius: 1000px 0px 0px 1000px;
-}
-
-.bottone-contattaci {
-  position: absolute;
-  top: 670px;
-  left: 100px;
-  font-size: 30px;
-  border-radius: 15px;
-  width: 190px;
-  height: 80px;
-  font-family: 'Segoe UI', sans-serif;
-  font-weight: 500;
-  background-color: #7054a4;
-  border: 0;
-  color: white;
-
-}
-
-.shape {
-  width: 2544px; 
-  height: 300px;
-  background-color: #b094e4;
-  position: absolute;
-  top: 1000px; 
-  left: 0px;
-  z-index: -1;
-}
-
-.b {
-  position: absolute;
-  top: 24%; 
-  left: 2%;
-  color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 80px;
-}
-
-.w {
-  position: absolute;
-  top: 32%; 
-  left: 2.2%;
-  color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 80px;
-}
-
-.frase-moti {
-  font-size: 32px;
-  color: white;
-  font-weight: 600;
-  position: absolute;
-  padding-top: 500px;
-  left: 60px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-img {
-  position: absolute; 
-  top: 55%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  width: 700px;
-  height: auto;
-}
-
-.cerchio-1 {
-  position: absolute;
-  width: 1000px;
-  height: 1000px;
-  background-color: #704c94;
-  left: 2000px;
-  top: -400px;
-  border-radius: 50%;
-  clip-path: inset(0 400px 0 0px);
-}
-
-.cerchio-2 {
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  background-color: #704c94;
-  left: -100px;
-  top: 420px;
-  border-radius: 50%;
-}
-
-h1 {
+h1{
   color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 60px;
@@ -245,12 +151,6 @@ nav ul li a::after {
   transition: width 0.4s ease, left 0.4s ease;
 }
 
-/* Escludere completamente il bottone Get Started */
-.bottone-contattaci::after {
-  display: none !important;
-}
-
-/* Evitare la sottolineatura sui bottoni */
 button::after {
   display: none !important;
 }
@@ -262,31 +162,143 @@ nav ul li a:hover::after {
   left: 0;
 }
 
-.bottone-contattaci {
-  position: relative;
-  font-size: 30px;
-  border-radius: 15px;
-  width: 190px;
-  height: 80px;
-  background-color: #7054a4;
-  border: 0;
-  color: white;
-  text-align: center;
+html {
+  width: 100vw;
+  height: 100vh;
 }
-
-.bottone-contattaci::after {
-  content: "";
+.lavoro-1{
+    background-color: white;
+    width: 500px;
+    height: 650px;
+    top: 250px;
+    left: 150px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 30px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.3);
+}
+.lavoro-2{
+    background-color: white;
+    width: 500px;
+    height: 650px;
+    top: 250px;
+    left: 900px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 30px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.3);
+}
+.lavoro-3{
+    background-color: white;
+    width: 500px;
+    height: 650px;
+    top: 250px;
+    left: 1650px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 30px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.3);
+}
+img{
+  width: 420px;
+  height: 385px;
+  top: 290px;
   position: absolute;
-  left: 50%;
-  bottom: -5px;
-  width: 0;
-  height: 4px;
-  background-color: white;
-  transition: width 0.4s ease, left 0.4s ease;
+  left: 190px;
+  border-radius: 30px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.purple-shape {
+  width: 505px; 
+  height: 1960px;
+  background: linear-gradient(#7054ac); 
+  position: absolute;
+  top: -1400px; 
+  left:1900px;
+  border-radius: 0px 0px 1000px 1000px ;
+  z-index: -9;
+  clip-path: inset(270px 0px 0px 0px);
+  animation: slideFromTop 1.7s ease-in-out;
+}
+.cerchio-1 {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  background-color: #c1a2e7c6;
+  left: -600px;
+  top: 600px;
+  border-radius: 50%;
+  z-index: -3;
+  clip-path: inset(0px 0px 270px 0px);
+  animation: slideFromLeft 1.6s ease;
+  
+}
+.visita{
+  font-size: 38px;
+  width:190px;
+  height: 90px;
+  border-radius: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  top: 740px;
+  position: absolute;
+  left: 300px;
+  border: none;
+  background-color:#684280;
+  color: white;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.visita-2{
+  font-size: 38px;
+  width:190px;
+  height: 90px;
+  border-radius: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  top: 740px;
+  position: absolute;
+  left: 1050px;
+  border: none;
+  background-color:#684280;
+  color: white;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.visita-3{
+  font-size: 38px;
+  width:190px;
+  height: 90px;
+  border-radius: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  top: 740px;
+  position: absolute;
+  left: 1800px;
+  border: none;
+  background-color:#684280;
+  color: white;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-.bottone-contattaci:hover::after {
-  width: 100%;
-  left: 0;
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
-
