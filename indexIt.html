@@ -12,9 +12,8 @@
   <div id="cambia-lingua">
   <label for="seleziona-la-lingua">Lingua:</label>
   <select id="seleziona-la-lingua" onchange="cambiaLingua()">
-    <option value="en">English</option>
     <option value="it">Italiano</option>
-    
+    <option value="en">English</option>
   </select>
 </div>
   <div class="cerchio-2"></div>
@@ -27,7 +26,7 @@
   <img src="Screenshot_2025-06-13_154951-removebg-preview (1).png">
   <div class="rettangolo"></div>
   <h1>WebBooster</h1>
-  <div class="casella">
+  <div class="casella" id="contactMenu">
     <p class="contattaci">Contattaci!</p>
     <p>Il nostro instagram:<a href="https://www.instagram.com/web.booster__?igsh=MTN4aWN5dmhmaHppMg%3D%3D&utm_source=qr">WebBooster</a></p>
     <p>Il nostro phone number: 3383591866</p>
@@ -37,7 +36,7 @@
 
   <!-- Bottone -->
   <a id="menuButton">Discover</a>
-  <button class="bottone-contattaci">Inizia</button>
+  <button class="bottone-contattaci" id="contactButton">Inizia</button>
 
   <!-- Menu overlay -->
   <div id="overlayMenu" class="overlay">
@@ -51,17 +50,6 @@
     </nav>
   </div>
   
-  <script>
-    const menuBtn = document.getElementById("menuButton");
-    const overlay = document.getElementById("overlayMenu");
-
-    menuBtn.addEventListener("click", () => {
-      overlay.classList.toggle("show");
-    });
-
-    document.querySelectorAll('.linea').forEach(line => {
-      line.classList.add('show');
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

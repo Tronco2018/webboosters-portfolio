@@ -220,6 +220,11 @@ option{
   visibility: visible;
 }
 
+.casella.show{
+  opacity: 1;
+  visibility: visible;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -294,6 +299,7 @@ nav ul li a:hover::after {
   font-weight: 500;
   border-radius: 15px;
   color: white;
+  visibility: hidden;
   
 }
 .contattaci{

@@ -1,14 +1,25 @@
-const menuButton = document.getElementById('menuButton');
-const overlay = document.getElementById('overlayMenu'); // oppure '.overlay'
-const linee = document.querySelectorAll('.linea');
+    const menuBtn = document.getElementById("menuButton");
+    const overlay = document.getElementById("overlayMenu");
+    const contactButton = document.getElementById("contactButton");
+    const contactMenu = document.getElementById("contactMenu");
 
-menuButton.addEventListener('click', () => {
-  overlay.classList.toggle('show');
+    menuBtn.addEventListener("click", () => {
+      overlay.classList.toggle("show");
+    });
 
-  // Rimuove e riapplica la classe per riattivare l’animazione ogni volta
-  linee.forEach((linea) => {
-    linea.classList.remove('attiva');
-    void linea.offsetWidth; // forza il reflow per "resettare" l'animazione
-    linea.classList.add('attiva');
-  });
-});
+    document.querySelectorAll('.linea').forEach(line => {
+      line.classList.add('show');
+    });
+
+    contactButton.addEventListener("click", () =>{
+      contactMenu.classList.toggle("show");
+    });
+
+    function cambiaLingua(){
+      const selLanguage = document.getElementById("seleziona-la-lingua").value;
+      if (selLanguage === "it"){
+        window.location.href = "indexIt.html";
+      } else if (selLanguage === "en"){
+        window.location.href="index.html";
+      }
+    }
