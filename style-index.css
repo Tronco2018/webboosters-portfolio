@@ -154,8 +154,20 @@ h1 {
   font-size: 28px;
    top: 37.5px;
    left: 600px;
+   z-index: 9999;
   
 }
+.casella {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.casella.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 label{
   width: 30px;
   height: 30px;
@@ -274,10 +286,10 @@ nav ul li a:hover::after {
 
 .bottone-contattaci {
   position: absolute;
-  font-size: 30px;
+  font-size: 40px;
   border-radius: 15px;
-  width: 200px;
-  height: 80px;
+  width: 250px;
+  height: 90px;
   background-color: #7054a4;
   border: 0;
   color: white;
