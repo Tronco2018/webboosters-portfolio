@@ -35,3 +35,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+document.getElementById("menuButton").addEventListener("click", function() {
+    let contactUs = document.getElementById("contactMenu"); // Usa "contactMenu" invece di "contactButton"
+    
+    if (contactUs.classList.contains("show")) {
+        contactUs.classList.remove("show");
+        contactUs.style.display = "none";
+        console.log("Il menu Contact Us è stato chiuso.");
+    }
+});
+
+// "Get Started" deve aprire e chiudere "Contact Us" correttamente
+document.getElementById("contactButton").addEventListener("click", function() {
+    let contactUs = document.getElementById("contactMenu"); // Assicurati che sia "contactMenu"
+    
+    if (contactUs.style.display === "block") {
+        contactUs.style.display = "none";
+        contactUs.classList.remove("show");
+        console.log("Il menu Contact Us è stato chiuso.");
+    } else {
+        contactUs.style.display = "block";
+        contactUs.classList.add("show");
+        console.log("Il menu Contact Us è stato aperto.");
+    }
+});
+
