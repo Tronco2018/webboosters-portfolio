@@ -23,6 +23,15 @@ function cambiaLingua() {
     window.location.href = "index.html";
   }
 }
+function cambiaLinguaWorks(){
+  const selLanguage = document.getElementById("seleziona-la-lingua").value;
+  localStorage.setItem("lingua", selLanguage); // Salva la lingua selezionata
+  if (selLanguage === "it") {
+    window.location.href = "i-nostri-lavori.html";
+  } else if (selLanguage === "en") {
+    window.location.href = "Our-works.html";
+  }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const savedLanguage = localStorage.getItem("lingua");
