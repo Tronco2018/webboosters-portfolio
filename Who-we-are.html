@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" class:"icona" href="Screenshot_2025-06-13_160227-removebg-preview.png" type="image/png">
+  <link rel="stylesheet" href="style-index.css">
+  <meta charset="UTF-8">
+  <title>webbooster</title>
 </head>
 <body>
-    
+  <div id="cambia-lingua">
+  <label for="seleziona-la-lingua">Lingua:</label>
+  <select id="seleziona-la-lingua" onchange="cambiaLingua()">
+    <option value="it">Italiano</option>
+    <option value="en">English</option>
+  </select>
+</div>
+
+  <h1>WebBooster</h1>
+  <h2>Chi Siamo</h2>
+  <h3>Giovani Web Developer</h3>
+  <p>Siamo un team di studenti appasionati di porgrammazione e sviluppo web, creiamo siti moderni, e su misura per te!</p>
+  <h2>Cosa Facciamo</h2>
+  <h4>💡Idee su misura</h4>
+  <p>Progetti unici per ogni cliente cercando di soddisfare ogni esigenza</p>
+  <h4>Design moderno</h4>
+  <p>Scegliendo la palette e lo stile ti garantiamo dei siti perfetti per te</p>
+  <h4>🔧Codice pulito</h4>
+  <p>scritto in JS, CSS e HTML con cura e versionato con Git</p>
+  <h2>Vuoi un sito fatto su misura per te?</h2>
+  <p>contattaci ora e raccontaci le tue idee!</p>
+     <div class="casella" id="contactMenu">
+    <p class="contattaci" id="contact-us">Contact us!</p>
+    <p id="our-instagram">Our instagram:<a href="https://www.instagram.com/web.booster__?igsh=MTN4aWN5dmhmaHppMg%3D%3D&utm_source=qr">WebBooster</a></p>
+    <p id="our-phone-number">Our phone number: 3383591866</p>
+    <p id="our-email">Our mail: marketing.webboosters@outlook.com</p>
+  </div>
+  
+
+  <!-- Bottone -->
+  <a id="menuButton">Scopri</a>
+  <button class="bottone-contattaci" id="contactButton">Inizia</button>
+  <a href="i-nostri-lavori.html"><button class="guarda">Guarda i nostri lavori</button></a>
+  <!-- Menu overlay -->
+  <div id="overlayMenu" class="overlay">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home page</a></li>
+        <li><a href="Who-we-are.html">Chi siamo</a></li>
+        <li><a href="Our-works.html">I nostri lavori</a></li>
+
+      </ul>
+    </nav>
+  </div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
