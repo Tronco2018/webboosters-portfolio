@@ -5,7 +5,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" class:"icona" href="Screenshot_2025-06-13_160227-removebg-preview.png" type="image/png">
   <link rel="stylesheet" href="style-works.css">
-  <script src="script.js"></script>
   <meta charset="UTF-8">
   <title>webbooster</title>
 </head>
@@ -33,11 +32,61 @@
     <nav>
       <ul>
         <li><a href="index.html">Home page</a></li>
-        <li><a href="Who-we-are.html">chi siamo</a></li>
+        <li><a href="chi-siamo.html">chi siamo</a></li>
         <li><a href="Our-works.html">i nostri lavori</a></li>
 
       </ul>
     </nav>
   </div>
+  <script>
+    const menuBtn = document.getElementById("menuButton");
+    const overlay = document.getElementById("overlayMenu");
+    const contactButton = document.getElementById("contactButton");
+    const contactMenu = document.getElementById("contactMenu");
+
+    menuBtn.addEventListener("click", () => {
+      overlay.classList.toggle("show");
+    });
+
+    document.querySelectorAll('.linea').forEach(line => {
+      line.classList.add('show');
+    });
+
+    if (contactButton && contactMenu) {
+      contactButton.addEventListener("click", () => {
+        contactMenu.classList.toggle("show");
+        contactMenu.style.display = contactMenu.classList.contains("show") ? "block" : "none";
+      });
+    }
+
+    function cambiaLingua() {
+      const selLanguage = document.getElementById("seleziona-la-lingua").value;
+      localStorage.setItem("lingua", selLanguage);
+      if (selLanguage === "it") window.location.href = "indexIt.html";
+      else if (selLanguage === "en") window.location.href = "index.html";
+    }
+
+    function cambiaLinguaWorks() {
+      const selLanguage = document.getElementById("seleziona-la-lingua").value;
+      localStorage.setItem("lingua", selLanguage);
+      if (selLanguage === "it") window.location.href = "i-nostri-lavori.html";
+      else if (selLanguage === "en") window.location.href = "Our-works.html";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLanguage = localStorage.getItem("lingua");
+      if (savedLanguage) {
+        const langSelect = document.getElementById("seleziona-la-lingua");
+        if (langSelect) langSelect.value = savedLanguage;
+
+        const url = window.location.href;
+        if (savedLanguage === "it" && url.includes("index.html")) {
+          window.location.href = "indexIt.html";
+        } else if (savedLanguage === "en" && url.includes("indexIt.html")) {
+          window.location.href = "index.html";
+        }
+      }
+    });
+  </script>
 </body>
 </html>

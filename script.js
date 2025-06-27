@@ -54,7 +54,7 @@ document.getElementById("menuButton").addEventListener("click", function() {
     }
 });
 
-// "Get Started" deve aprire e chiudere "Contact Us" correttamente
+
 document.getElementById("contactButton").addEventListener("click", function() {
     let contactUs = document.getElementById("contactMenu"); // Assicurati che sia "contactMenu"
     
