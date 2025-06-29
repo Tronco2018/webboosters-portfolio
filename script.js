@@ -23,6 +23,15 @@ function cambiaLingua() {
     window.location.href = "index.html";
   }
 }
+function cambiaLinguaSiamo(){
+  const selLanguage = document.getElementById("seleziona-la-lingua").value;
+  localStorage.setItem("lingua", selLanguage); // Salva la lingua selezionata
+  if (selLanguage === "it") {
+    window.location.href = "chi-siamo.html";
+  } else if (selLanguage === "en") {
+    window.location.href = "Who-we-are.html";
+  }
+}
 function cambiaLinguaWorks(){
   const selLanguage = document.getElementById("seleziona-la-lingua").value;
   localStorage.setItem("lingua", selLanguage); // Salva la lingua selezionata
