@@ -392,3 +392,18 @@ html {
     opacity: 1;
   }
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .casella {
+    padding: 1rem;
+    width: 90%;
+  }
+
+  #contactButton {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}

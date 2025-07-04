@@ -78,3 +78,18 @@ document.getElementById("contactButton").addEventListener("click", function() {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    if (!localStorage.getItem("cookieAccepted")) {
+        const banner = document.createElement("div");
+        banner.innerHTML = `
+            <div style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 1rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000;">
+                <span>Questo sito usa cookie tecnici e potenzialmente di terze parti. Continuando accetti la <a href='privacy.html' style='color: #0af;'>privacy policy</a>.</span>
+                <button id="acceptCookies" style="margin-right: 5rem; padding: 0.5rem 1rem; background: #0af; border: none; color: white; cursor: pointer;">Accetto</button>
+            </div>`;
+        document.body.appendChild(banner);
+        document.getElementById("acceptCookies").onclick = function () {
+            localStorage.setItem("cookieAccepted", "true");
+            banner.remove();
+        };
+    }
+});
