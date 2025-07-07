@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" class:"icona" href="Screenshot_2025-06-13_160227-removebg-preview.png" type="image/png">
-  <link rel="stylesheet" href="style-index.css">
   <meta charset="UTF-8">
-  <title>webbooster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebBooster</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Icona -->
+  <link rel="icon" href="Screenshot_2025-06-13_160227-removebg-preview.png" type="image/png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style-index.css">
 </head>
 <body>
+  <!-- Selettore lingua -->
   <div id="cambia-lingua">
-  <label for="seleziona-la-lingua">Language:</label>
-  <select id="seleziona-la-lingua" onchange="cambiaLingua()">
-    <option value="en">English</option>
-    <option value="it">Italiano</option>
-  </select>
-</div>
+    <label for="seleziona-la-lingua">Language:</label>
+    <select id="seleziona-la-lingua" onchange="cambiaLingua()">
+      <option value="en">English</option>
+      <option value="it">Italiano</option>
+    </select>
+  </div>
+
+  <!-- Elementi grafici -->
   <div class="cerchio-2"></div>
   <div class="cerchio-1"></div>
   <div class="shape"></div>
   <div class="purple-shape"></div>
+
+  <!-- Titoli -->
   <h2 class="b" id="secondary-title">Build Your Website</h2>
   <h2 class="w" id="subtitle">With Us</h2>
+
+  <!-- Frase promozionale -->
   <p class="frase-moti" id="motto">We build fantastic websites at the best price</p>
-  <img src="Screenshot_2025-06-13_154951-removebg-preview (1).png">
+
+  <!-- Immagine principale -->
+  <img src="Screenshot_2025-06-13_154951-removebg-preview (1).png" alt="WebBooster design">
+
+  <!-- Logo o intestazione -->
   <div class="rettangolo"></div>
   <h1>WebBooster</h1>
+
+  <!-- Box contatti -->
   <div class="casella" id="contactMenu">
     <p class="contattaci" id="contact-us">Contact us!</p>
-    <p id="our-instagram">Our instagram:<a href="https://www.instagram.com/web.booster__?igsh=MTN4aWN5dmhmaHppMg%3D%3D&utm_source=qr">WebBooster</a></p>
+    <p id="our-instagram">Our Instagram: 
+      <a href="https://www.instagram.com/web.booster__?igsh=MTN4aWN5dmhmaHppMg%3D%3D&utm_source=qr" target="_blank">
+        WebBooster
+      </a>
+    </p>
     <p id="our-phone-number">Our phone number: 3383591866</p>
     <p id="our-email">Our mail: marketing.webboosters@outlook.com</p>
   </div>
 
-  <!-- Bottone -->
+  <!-- Pulsanti -->
   <a id="menuButton">Discover</a>
   <button class="bottone-contattaci" id="contactButton">Get Started</button>
 
@@ -44,12 +67,11 @@
         <li><a href="index.html" id="home-sec">Home</a></li>
         <li><a href="Who-we-are.html" id="whoare-sec">Who we are</a></li>
         <li><a href="Our-works.html" id="our-sec">Our works</a></li>
-
       </ul>
     </nav>
   </div>
-  
-  
+
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>

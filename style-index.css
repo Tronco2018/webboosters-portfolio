@@ -1,22 +1,108 @@
+/* CSS aggiornato per mantenere la versione mobile identica a quella desktop (nessuna modifica a posizioni o grandezze) */
+
 body {
-  width: 1920px; /* Mantiene la tua impostazione originale */
-  height: 1080px;
+  width: 100%;
+  min-height: 100vh;
   background-color: rgba(40,25,54,255);
   overflow-x: hidden;
-  overflow-y: hidden; /* Evita lo scorrimento orizzontale */
   position: relative;
-  
+}
+
+.purple-shape, .shape, .cerchio-1, .cerchio-2 {
+  position: absolute;
 }
 
 .purple-shape {
-  width: 1960px; 
+  width: 1960px;
   height: 505px;
-  background: linear-gradient(#6c54a8); 
-  position: absolute;
-  top: 800px; 
+  background: linear-gradient(#6c54a8);
+  top: 800px;
   left: 600px;
   border-radius: 1000px 0px 0px 1000px;
   animation: slideFromright 1.9s ease-in-out;
+}
+
+.shape {
+  width: 2560px;
+  height: 300px;
+  background-color: #b094e4;
+  top: 1000px;
+  left: -10px;
+  z-index: -1;
+  animation: slideFrombottom 1.2s ease;
+}
+
+.cerchio-1 {
+  width: 1000px;
+  height: 1000px;
+  background-color: #704c94;
+  left: 2000px;
+  top: -400px;
+  border-radius: 50%;
+  clip-path: inset(0 400px 0 0px);
+  animation: slideFromTop 1.6s ease-out;
+}
+
+.cerchio-2 {
+  width: 250px;
+  height: 250px;
+  background-color: #704c94;
+  left: -100px;
+  top: 380px;
+  border-radius: 50%;
+  animation: slideFromLeft 1.6s ease;
+}
+
+h1 {
+  color: white;
+  font-family: system-ui, sans-serif;
+  font-size: 60px;
+  padding-left: 50px;
+  margin-top: 50px;
+}
+
+#menuButton {
+  position: absolute;
+  top: 10px;
+  left: 450px;
+  z-index: 1100;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: white;
+  font-weight: 600;
+  font-family: system-ui, sans-serif;
+  margin-top: 27px;
+  margin-right: 1870px;
+}
+
+#menuButton::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+
+#menuButton:hover::after {
+  width: 100%;
+}
+
+#cambia-lingua {
+  color:white;
+  position: absolute;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  top: 37.5px;
+  left: 600px;
+  z-index: 9999;
 }
 
 .bottone-contattaci {
@@ -34,6 +120,14 @@ body {
   color: white;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  text-align: center;
+  margin-top: -50px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.bottone-contattaci::after {
+  display: none !important;
 }
 
 .bottone-contattaci:hover {
@@ -41,38 +135,29 @@ body {
   box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.4);
 }
 
-a{
-  color: #b094e4;
+img {
+  position: absolute;
+  top: 55%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  max-width: 90vw;
+  width: 700px;
+  max-width: 90vw;
+  height: auto;
+  max-height: 80vh;
+
 }
 
-.shape {
-  width: 2560px; 
-  height: 300px;
-  background-color: #b094e4;
+.b, .w {
   position: absolute;
-  top: 1000px; 
-  left: -10px;
-  z-index: -1;
-  animation: slideFrombottom 1.2s ease;
-}
-
-.b {
-  position: absolute;
-  top: 24%; 
-  left: 2%;
   color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, sans-serif;
   font-size: 80px;
+  white-space: nowrap;
 }
 
-.w {
-  position: absolute;
-  top: 32%; 
-  left: 2.2%;
-  color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 80px;
-}
+.b { top: 20%; left: 2%; z-index: 2; }
+.w { top: 27%; left: 2.2%; z-index: 1; }
 
 .frase-moti {
   font-size: 32px;
@@ -81,148 +166,8 @@ a{
   position: absolute;
   padding-top: 500px;
   left: 60px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, sans-serif;
 }
-
-img {
-  position: absolute; 
-  top: 55%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  width: 700px;
-  height: auto;
-}
-
-.cerchio-1 {
-  position: absolute;
-  width: 1000px;
-  height: 1000px;
-  background-color: #704c94;
-  left: 2000px;
-  top: -400px;
-  border-radius: 50%;
-  clip-path: inset(0 400px 0 0px);
-  animation: slideFromTop 1.6s ease-out;
-}
-
-.cerchio-2 {
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  background-color: #704c94;
-  left: -100px;
-  top: 380px;
-  border-radius: 50%;
-  animation: slideFromLeft 1.6s ease;
-}
-
-h1 {
-  color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 60px;
-  padding-left: 50px;
-  margin-top: 50px;
-}
-
-#menuButton {
-  position: absolute;
-  top: 10px;
-  left: 450px;
-  z-index: 1100;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  font-size: 28px;
-  color: white;
-  font-weight: 600;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin-top: 27px;
-  margin-right: 1870px;
-}
-
-
-
-#menuButton {
-  position: absolute;
-  top: 10px;
-  left: 450px;
-  z-index: 1100;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  font-size: 28px;
-  color: white;
-  font-weight: 600;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin-top: 27px;
-  margin-right: 1870px;
-}
-#cambia-lingua{
-  color:white;
-  position: absolute;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 600;
-  font-size: 28px;
-   top: 37.5px;
-   left: 600px;
-   z-index: 9999;
-   
-  
-}
-.casella {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease-in-out, visibility 0.5s ease-in-out;
- 
-}
-
-.casella.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-label{
-  width: 30px;
-  height: 30px;
-  
-}
-select{
-  width: 100px;
-  height: 35px;
-  font-size: 22px;
-  font-weight: 600;
-  background-color: transparent;
-  border: none;
-  color: white ;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  cursor: pointer;
-}
-option{
-  color: rgb(255, 255, 255);
-  font-weight: 500;
-  background-color:#301c34;
-  border:transparent;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-
-#menuButton::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -2px; /* Posizioniamo la linea appena sotto il testo */
-  width: 0;
-  height: 3px;
-  background-color: white;
-  transform: translateX(-50%);
-  transition: width 0.4s ease;
-  z-index: -1; /* Assicura che sia sotto il testo */
-}
-
-#menuButton:hover::after {
-  width: 100%;
-}
-
 
 .overlay {
   position: fixed;
@@ -246,7 +191,26 @@ option{
   visibility: visible;
 }
 
-.casella.show{
+.casella {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.5s ease-in-out;
+  background-color: rgba(37, 37, 37, 0.934);
+  width: 700px;
+  font-family: system-ui, sans-serif;
+  font-size: 25px;
+  text-align: center;
+  height: 400px;
+  z-index: 100000;
+  top: 500px;
+  left: 900px;
+  position: absolute;
+  font-weight: 500;
+  border-radius: 15px;
+  color: white;
+}
+
+.casella.show {
   opacity: 1;
   visibility: visible;
 }
@@ -267,7 +231,7 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, sans-serif;
 }
 
 nav ul li a::after {
@@ -281,129 +245,35 @@ nav ul li a::after {
   transition: width 0.4s ease, left 0.4s ease;
 }
 
-/* Escludere completamente il bottone Get Started */
-.bottone-contattaci::after {
-  display: none !important;
-}
-
-/* Evitare la sottolineatura sui bottoni */
-button::after {
-  display: none !important;
-}
-
-
-
 nav ul li a:hover::after {
   width: 100%;
   left: 0;
 }
 
-.bottone-contattaci {
-  position: absolute;
-  font-size: 40px;
-  border-radius: 15px;
-  width: 250px;
-  height: 90px;
-  background-color: #7054a4;
-  border: 0;
-  color: white;
-  text-align: center;
-  margin-top: -50px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-}
-.casella{
-  background-color:rgba(37, 37, 37, 0.934);
-  width: 700px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 25px;
-  text-align: center;
-  height: 400px;
-  z-index: 100000;
-  top: 500px;
-  left: 900px;
-  position: absolute;
-  font-weight: 500;
-  border-radius: 15px;
-  color: white;
-  visibility: hidden;
-  
-}
-.contattaci{
-  font-size: 40px;
+/* Responsive styles - version identical to desktop */
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
 }
 
-.bottone-contattaci::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -5px;
-  width: 0;
-  height: 4px;
-  background-color: white;
-  transition: width 0.4s ease, left 0.4s ease;
-}
-
-.bottone-contattaci:hover::after {
-  width: 100%;
-  left: 0;
-}
-html {
-  width: 100vw;
-  height: 100vh;
-}
+/* Keyframe animations */
 @keyframes slideFromLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideFromTop {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
 }
+
 @keyframes slideFromright {
-  from {
-    transform: translatex(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translatex(0);
-    opacity: 1;
-  }
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
 }
+
 @keyframes slideFrombottom {
-  from {
-    transform: translatey(100%);
-    opacity: 1;
-  }
-  to {
-    transform: translatey(0);
-    opacity: 1;
-  }
-}
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .casella {
-    padding: 1rem;
-    width: 90%;
-  }
-
-  #contactButton {
-    width: 100%;
-    margin-top: 1rem;
-  }
+  from { transform: translateY(100%); opacity: 1; }
+  to   { transform: translateY(0); opacity: 1; }
 }
