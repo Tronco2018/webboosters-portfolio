@@ -46,12 +46,12 @@ a{
 }
 
 .shape {
-  width: 2544px; 
+  width: 2560px; 
   height: 300px;
   background-color: #b094e4;
   position: absolute;
   top: 1000px; 
-  left: 0px;
+  left: -10px;
   z-index: -1;
   animation: slideFrombottom 1.2s ease;
 }
