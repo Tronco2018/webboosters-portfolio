@@ -14,45 +14,37 @@
     contactButton.addEventListener("click", () =>{
       contactMenu.classList.toggle("show");
     });
-function cambiaLingua() {
-  const selLanguage = document.getElementById("seleziona-la-lingua").value;
-  localStorage.setItem("lingua", selLanguage); // Salva la lingua selezionata
-  if (selLanguage === "it") {
-    window.location.href = "indexIt.html";
-  } else if (selLanguage === "en") {
-    window.location.href = "index.html";
-  }
-}
-function cambiaLinguaSiamo(){
-  const selLanguage = document.getElementById("seleziona-la-lingua").value;
-  localStorage.setItem("lingua", selLanguage); // Salva la lingua selezionata
-  if (selLanguage === "it") {
-    window.location.href = "chi-siamo.html";
-  } else if (selLanguage === "en") {
-    window.location.href = "Who-we-are.html";
-  }
-}
-function cambiaLinguaWorks(){
-  const selLanguage = document.getElementById("seleziona-la-lingua").value;
-  localStorage.setItem("lingua", selLanguage); // Salva la lingua selezionata
-  if (selLanguage === "it") {
-    window.location.href = "i-nostri-lavori.html";
-  } else if (selLanguage === "en") {
-    window.location.href = "Our-works.html";
-  }
-}
 
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLanguage = localStorage.getItem("lingua");
-  if (savedLanguage) {
-    document.getElementById("seleziona-la-lingua").value = savedLanguage;
-    if (savedLanguage === "it" && window.location.href.includes("index.html")) {
-      window.location.href = "indexIt.html";
-    } else if (savedLanguage === "en" && window.location.href.includes("indexIt.html")) {
-      window.location.href = "index.html";
+const languageButton = document.getElementById('languageButton');
+const overlayLanguage = document.getElementById('overlayLanguage');
+
+languageButton.addEventListener('click', () => {
+  overlayLanguage.classList.toggle('show');
+});
+
+// Chiudi overlay cliccando fuori o sul link
+overlayLanguage.addEventListener('click', (e) => {
+  if(e.target === overlayLanguage) {
+    overlayLanguage.classList.remove('show');
+  }
+});
+// Chiudi contactMenu se clicchi fuori da esso
+document.addEventListener('click', (e) => {
+  const contactMenu = document.getElementById("contactMenu");
+  const contactButton = document.getElementById("contactButton");
+
+  // Se la casella è aperta
+  if (contactMenu.classList.contains("show")) {
+    // E il click NON è su contactMenu né su contactButton
+    if (!contactMenu.contains(e.target) && e.target !== contactButton) {
+      contactMenu.classList.remove("show");
+      contactMenu.style.display = "none";
+      console.log("Contact menu chiuso cliccando fuori.");
     }
   }
 });
+
+
 document.getElementById("menuButton").addEventListener("click", function() {
     let contactUs = document.getElementById("contactMenu"); // Usa "contactMenu" invece di "contactButton"
     

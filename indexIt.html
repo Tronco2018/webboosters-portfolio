@@ -1,56 +1,84 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" class:"icona" href="Screenshot_2025-06-13_160227-removebg-preview.png" type="image/png">
-  <link rel="stylesheet" href="style-index.css">
-  <meta charset="UTF-8">
-  <title>webbooster</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WebBooster</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Icona -->
+  <link rel="icon" href="Screenshot_2025-06-13_160227-removebg-preview.png" type="image/png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style-index-ita.css"/>
 </head>
 <body>
-  <div id="cambia-lingua">
-  <label for="seleziona-la-lingua">Lingua:</label>
-  <select id="seleziona-la-lingua" onchange="cambiaLingua()">
-    <option value="it">Italiano</option>
-    <option value="en">English</option>
-  </select>
-</div>
-  <div class="cerchio-2"></div>
-  <div class="cerchio-1"></div>
-  <div class="shape"></div>
-  <div class="purple-shape"></div>
-  <h2 class="b">Crea il Tuo Sito</h2>
-  <h2 class="w">Con Noi</h2>
-  <p class="frase-moti">Ti creeremo un sito perfetto ad un prezzo vantaggioso</p>
-  <img src="Screenshot_2025-06-13_154951-removebg-preview (1).png">
-  <div class="rettangolo"></div>
+
+<!-- Overlay Lingua -->
+
+<div class="top-header">
   <h1>WebBooster</h1>
-
-  <div class="casella" id="contactMenu">
-    <p class="contattaci">Contattaci!</p>
-    <p>Il nostro instagram:<a href="https://www.instagram.com/web.booster__?igsh=MTN4aWN5dmhmaHppMg%3D%3D&utm_source=qr">WebBooster</a></p>
-    <p>Il nostro phone number: 3383591866</p>
-    <p>La nostra mail: marketing.webboosters@outlook.com</p>
-  </div>
-  
-
-  <!-- Bottone -->
-  <a id="menuButton">Scopri</a>
-  <button class="bottone-contattaci" id="contactButton">Inizia</button>
-
-  <!-- Menu overlay -->
+  <button id="menuButton">Scopri</button>
   <div id="overlayMenu" class="overlay">
     <nav>
       <ul>
-        <li><a href="index.html">Home page</a></li>
-        <li><a href="chi-siamo.html">Chi siamo</a></li>
-        <li><a href="Our-works.html">I nostri lavori</a></li>
-
+        <li><a href="index.html" id="home-sec">Home</a></li>
+        <li><a href="Who-we-are.html" id="whoare-sec">Chi siamo</a></li>
+        <li><a href="Our-works.html" id="our-sec">I nostri lavori</a></li>
       </ul>
     </nav>
   </div>
-  
-  <script src="script.js"></script>
+  <button id="languageButton">Lingua</button>
+  <div id="overlayLanguage" class="overlay">
+    <nav>
+      <ul>
+        <li><a href="index.html">English</a></li>
+        <li><a href="indexIt.html">Italiano</a></li>
+        <!-- Puoi aggiungere altre lingue se vuoi -->
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- Elementi grafici -->
+<div class="cerchio-2"></div>
+<div class="cerchio-1"></div>
+<div class="shape"></div>
+<div class="purple-shape"></div>
+
+<!-- Titoli -->
+<h2 class="b" id="secondary-title">Crea il tuo sito</h2>
+<h2 class="w" id="subtitle">Con noi</h2>
+
+<!-- Immagine principale -->
+<img src="Screenshot_2025-06-13_154951-removebg-preview (1).png" alt="Design WebBooster" />
+
+<!-- Rettangolo grafico -->
+<div class="rettangolo"></div>
+
+<!-- Box contatti -->
+<div class="casella" id="contactMenu">
+  <p class="contattaci" id="contact-us">Contattaci!</p>
+  <p id="our-instagram">
+    Il nostro Instagram:
+    <a
+      href="https://www.instagram.com/web.booster__?igsh=MTN4aWN5dmhmaHppMg%3D%3D&utm_source=qr"
+      target="_blank"
+    >WebBooster</a>
+  </p>
+  <p id="our-phone-number">Numero di telefono: 3383591866</p>
+  <p id="our-email">Email: marketing.webboosters@outlook.com</p>
+</div>
+
+<!-- Motivazione + bottone -->
+<div class="motivazione-wrapper">
+  <p class="frase-moti" id="motto">Creiamo siti fantastici al miglior prezzo</p>
+  <button class="bottone-contattaci" id="contactButton">Inizia ora</button>
+</div>
+
+<!-- Script -->
+<script src="script.js"></script>
 </body>
 </html>
