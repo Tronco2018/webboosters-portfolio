@@ -7,51 +7,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const contactButton = document.getElementById("contactButton");
   const contactMenu = document.getElementById("contactMenu");
+  const overlayBlocker = document.getElementById("overlayBlocker");
 
-  // Funzione per chiudere tutti gli overlay
+  // Chiude tutti gli overlay
   function closeAllOverlays() {
-    if (overlayMenu) overlayMenu.classList.remove("show");
-    if (overlayLanguage) overlayLanguage.classList.remove("show");
-    if (contactMenu) contactMenu.classList.remove("show");
+    overlayMenu?.classList.remove("show");
+    overlayLanguage?.classList.remove("show");
+    contactMenu?.classList.remove("show");
+    overlayBlocker?.classList.remove("active");
   }
 
-  // Discover button
-  if (menuBtn && overlayMenu) {
-    menuBtn.addEventListener("click", () => {
-      const isOpen = overlayMenu.classList.contains("show");
-      closeAllOverlays();
-      if (!isOpen) overlayMenu.classList.add("show");
-    });
+  // Discover
+  menuBtn?.addEventListener("click", () => {
+    const isOpen = overlayMenu.classList.contains("show");
+    closeAllOverlays();
+    if (!isOpen) overlayMenu.classList.add("show");
+  });
+
+  // Language
+  languageButton?.addEventListener("click", () => {
+    const isOpen = overlayLanguage.classList.contains("show");
+    closeAllOverlays();
+    if (!isOpen) overlayLanguage.classList.add("show");
+  });
+
+  // Mostra/Nasconde la casella contatti
+  function toggleContactMenu() {
+    const isOpen = contactMenu.classList.contains("show");
+    closeAllOverlays();
+    if (!isOpen) {
+      contactMenu.classList.add("show");
+      overlayBlocker?.classList.add("active");
+    }
   }
 
-  // Language button
-  if (languageButton && overlayLanguage) {
-    languageButton.addEventListener("click", () => {
-      const isOpen = overlayLanguage.classList.contains("show");
-      closeAllOverlays();
-      if (!isOpen) overlayLanguage.classList.add("show");
-    });
-  }
+  contactButton?.addEventListener("click", toggleContactMenu);
+  contactButton?.addEventListener("touchstart", toggleContactMenu);
 
-  // Get Started button
-  if (contactButton && contactMenu) {
-    contactButton.addEventListener("click", () => {
-      const isOpen = contactMenu.classList.contains("show");
-      closeAllOverlays();
-      if (!isOpen) contactMenu.classList.add("show");
-    });
-  }
+  // Chiudi cliccando sull'overlay invisibile
+  overlayBlocker?.addEventListener("click", () => {
+    closeAllOverlays();
+  });
 
-  // Chiudi overlay se clicchi fuori
+  // Chiudi cliccando fuori da tutti gli overlay
   document.addEventListener("click", (e) => {
-    if (
-      (!overlayMenu || !overlayMenu.contains(e.target)) &&
-      (!menuBtn || !menuBtn.contains(e.target)) &&
-      (!overlayLanguage || !overlayLanguage.contains(e.target)) &&
-      (!languageButton || !languageButton.contains(e.target)) &&
-      (!contactMenu || !contactMenu.contains(e.target)) &&
-      (!contactButton || !contactButton.contains(e.target))
-    ) {
+    const isClickInsideOverlay =
+      overlayMenu?.contains(e.target) || menuBtn?.contains(e.target) ||
+      overlayLanguage?.contains(e.target) || languageButton?.contains(e.target);
+
+    const isClickInsideCasella =
+      contactMenu?.contains(e.target) || contactButton?.contains(e.target);
+
+    if (!isClickInsideOverlay && !isClickInsideCasella) {
       closeAllOverlays();
     }
   });

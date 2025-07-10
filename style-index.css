@@ -370,6 +370,9 @@ h1{
     width: 60% !important;
     left: 1vh;
     top: 4vh;
+    z-index: 9999;
+    touch-action: manipulation;
+  
   }
 
   img {
@@ -389,19 +392,12 @@ top: 20vh;
     top: 55vh;
     height: 10vh;
   }
-   .casella {
-    position: fixed !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 80% !important;
-    max-width: 400px !important; /* Per non farla troppo larga */
-    height: auto !important;
-    max-height: 80vh !important;
-    overflow-y: auto; /* Se il contenuto è lungo, scroll verticale dentro la casella */
-    padding: 20px;
-    border-radius: 15px;
-  }
+  .shape,
+.purple-shape,
+.cerchio-1,
+.cerchio-2 {
+  pointer-events: none;
+}
 
 .overlay {
   position: fixed;
@@ -409,15 +405,14 @@ top: 20vh;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.722);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 99999;
 }
 
 .overlay.show {
@@ -426,17 +421,71 @@ top: 20vh;
 }
 
 .overlay-content {
-  background-color: rgba(37, 37, 37, 0.95);
-  padding: 30px 20px;
-  border-radius: 15px;
+  background-color: transparent;
+  padding: 20px;
   text-align: center;
-  max-width: 90vw;
-  width: 90%;
-  max-height: 80vh;
-  overflow-y: auto;
-  box-sizing: border-box;
 }
 
+.overlay-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.overlay-content li {
+  margin: 20px 0;
+}
+
+.overlay-content a {
+  color: white;
+  font-size: 32px;
+  text-decoration: none;
+
+}
+
+.casella {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 400px;
+  background-color: rgba(37, 37, 37, 0.95);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.casella.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.casella a {
+  color: #b094e4;
+  text-decoration: underline;
+}
+
+.overlay-blocker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  z-index: 9998;
+  display: none;
+}
+
+.overlay-blocker.active {
+  display: block;
+}
 
 }
 

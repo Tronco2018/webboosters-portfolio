@@ -201,23 +201,28 @@ img {
 }
 
 .casella {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 700px;
-  height: 400px;
-  top: 500px;
-  left: 900px;
+  max-width: 90vw;
+  height: auto;
+  max-height: 80vh;
   background-color: rgba(37, 37, 37, 0.934);
   font-size: 25px;
   color: white;
   font-weight: 500;
   text-align: center;
   border-radius: 15px;
+  padding: 30px;
+  opacity: 0;
+  visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 100000;
-  
+  z-index: 10000;
+  overflow-y: auto;
 }
+
 .casella a {
   color: #b094e4;
 }
@@ -353,6 +358,7 @@ h1{
     width: 90% !important;
     margin: 10px auto !important;
     white-space: normal !important;
+    z-index: 999;
     
   }
 
@@ -403,6 +409,51 @@ top: 20vh;
     padding: 20px;
     border-radius: 15px;
   }
+  
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.722);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay-content {
+  background-color: transparent;
+  padding: 20px;
+  text-align: center;
+}
+
+.overlay-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.overlay-content li {
+  margin: 20px 0;
+}
+
+.overlay-content a {
+  color: white;
+  font-size: 32px;
+  text-decoration: none;
+
+}
+
 }
 
 @keyframes slideFromLeft {
