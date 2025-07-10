@@ -9,13 +9,7 @@
   <title>webbooster</title>
 </head>
 <body>
-  <div id="cambia-lingua">
-  <label for="seleziona-la-lingua">Lingua:</label>
-  <select id="seleziona-la-lingua" onchange="cambiaLinguaSiamo()">
-    <option value="it">Italiano</option>
-    <option value="en">English</option>
-  </select>
-</div>
+
  
   <h1>WebBooster</h1>
   <h2 class="cs">Who We Are</h2>
@@ -80,6 +74,21 @@
       </ul>
     </nav>
   </div>
+  <a id="languageButton">Language</a>
+
+<!-- Overlay Language -->
+<div id="overlayLanguage" class="overlay">
+  
+  <div class="overlay-content">
+    
+    <nav>
+      <ul>
+        <li><a href="Who-we-are.html">English</a></li>
+        <li><a href="chi-siamo.html">Italiano</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
 
   
   <script src="script.js"></script>

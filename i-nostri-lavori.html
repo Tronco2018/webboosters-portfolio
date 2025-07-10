@@ -9,13 +9,6 @@
   <title>webbooster</title>
 </head>
 <body>
-  <div id="cambia-lingua">
-  <label for="seleziona-la-lingua">Lingua:</label>
-  <select id="seleziona-la-lingua" onchange="cambiaLinguaWorks()">
-    <option value="it">Italiano</option>
-    <option value="en">English</option>
-  </select>
-</div>
 <img class"immagine-1" src="image-removebg-preview.png">
 <div class="lavoro-1"></div>
 <div class="lavoro-2"></div>
@@ -38,55 +31,95 @@
       </ul>
     </nav>
   </div>
+  <a id="languageButton">Language</a>
+  <!-- Overlay Language -->
+<div id="overlayLanguage" class="overlay">
+  <div class="overlay-content">
+    <nav>
+      <ul>
+        <li><a href="Our-works.html">English</a></li>
+        <li><a href="i-nostri-lavori.html">Italiano</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
   <script>
-    const menuBtn = document.getElementById("menuButton");
-    const overlay = document.getElementById("overlayMenu");
-    const contactButton = document.getElementById("contactButton");
-    const contactMenu = document.getElementById("contactMenu");
+ document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("menuButton");
+  const overlayMenu = document.getElementById("overlayMenu");
 
+  const languageButton = document.getElementById("languageButton");
+  const overlayLanguage = document.getElementById("overlayLanguage");
+
+  const contactButton = document.getElementById("contactButton");
+  const contactMenu = document.getElementById("contactMenu");
+
+  // Funzione per chiudere tutti gli overlay
+  function closeAllOverlays() {
+    if (overlayMenu) overlayMenu.classList.remove("show");
+    if (overlayLanguage) overlayLanguage.classList.remove("show");
+    if (contactMenu) contactMenu.classList.remove("show");
+  }
+
+  // Discover button
+  if (menuBtn && overlayMenu) {
     menuBtn.addEventListener("click", () => {
-      overlay.classList.toggle("show");
+      const isOpen = overlayMenu.classList.contains("show");
+      closeAllOverlays();
+      if (!isOpen) overlayMenu.classList.add("show");
     });
+  }
 
-    document.querySelectorAll('.linea').forEach(line => {
-      line.classList.add('show');
+  // Language button
+  if (languageButton && overlayLanguage) {
+    languageButton.addEventListener("click", () => {
+      const isOpen = overlayLanguage.classList.contains("show");
+      closeAllOverlays();
+      if (!isOpen) overlayLanguage.classList.add("show");
     });
+  }
 
-    if (contactButton && contactMenu) {
-      contactButton.addEventListener("click", () => {
-        contactMenu.classList.toggle("show");
-        contactMenu.style.display = contactMenu.classList.contains("show") ? "block" : "none";
-      });
-    }
-
-    function cambiaLingua() {
-      const selLanguage = document.getElementById("seleziona-la-lingua").value;
-      localStorage.setItem("lingua", selLanguage);
-      if (selLanguage === "it") window.location.href = "indexIt.html";
-      else if (selLanguage === "en") window.location.href = "index.html";
-    }
-
-    function cambiaLinguaWorks() {
-      const selLanguage = document.getElementById("seleziona-la-lingua").value;
-      localStorage.setItem("lingua", selLanguage);
-      if (selLanguage === "it") window.location.href = "i-nostri-lavori.html";
-      else if (selLanguage === "en") window.location.href = "Our-works.html";
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const savedLanguage = localStorage.getItem("lingua");
-      if (savedLanguage) {
-        const langSelect = document.getElementById("seleziona-la-lingua");
-        if (langSelect) langSelect.value = savedLanguage;
-
-        const url = window.location.href;
-        if (savedLanguage === "it" && url.includes("index.html")) {
-          window.location.href = "indexIt.html";
-        } else if (savedLanguage === "en" && url.includes("indexIt.html")) {
-          window.location.href = "index.html";
-        }
-      }
+  // Get Started button
+  if (contactButton && contactMenu) {
+    contactButton.addEventListener("click", () => {
+      const isOpen = contactMenu.classList.contains("show");
+      closeAllOverlays();
+      if (!isOpen) contactMenu.classList.add("show");
     });
+  }
+
+  // Chiudi overlay se clicchi fuori
+  document.addEventListener("click", (e) => {
+    if (
+      (!overlayMenu || !overlayMenu.contains(e.target)) &&
+      (!menuBtn || !menuBtn.contains(e.target)) &&
+      (!overlayLanguage || !overlayLanguage.contains(e.target)) &&
+      (!languageButton || !languageButton.contains(e.target)) &&
+      (!contactMenu || !contactMenu.contains(e.target)) &&
+      (!contactButton || !contactButton.contains(e.target))
+    ) {
+      closeAllOverlays();
+    }
+  });
+
+  // Cookie banner
+  if (!localStorage.getItem("cookieAccepted")) {
+    const banner = document.createElement("div");
+    banner.innerHTML = `
+      <div style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 1rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000;">
+          <span>Questo sito usa cookie tecnici e potenzialmente di terze parti. Continuando accetti la <a href='privacy.html' style='color: #0af;'>privacy policy</a>.</span>
+          <button id="acceptCookies" style="margin-right: 5rem; padding: 0.5rem 1rem; background: #0af; border: none; color: white; cursor: pointer;">Accetto</button>
+      </div>`;
+    document.body.appendChild(banner);
+    document.getElementById("acceptCookies").onclick = function () {
+      localStorage.setItem("cookieAccepted", "true");
+      banner.remove();
+    };
+  }
+});
+
+
   </script>
 </body>
 </html>

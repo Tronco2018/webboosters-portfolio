@@ -4,7 +4,7 @@ body {
   background-color: rgba(40,25,54,255);
   overflow-x: hidden; 
   position: relative;
-  overflow-y: hidden;
+ 
 }
 h1{
   color: white;
@@ -284,16 +284,46 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   margin-top: 27px;
   margin-right: 1870px;
 }
-#cambia-lingua{
-  color:white;
-  position: absolute;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+#languageButton {
+  font-size: 25px;
   font-weight: 600;
+  color: white;
+  background: none;
+  border: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 600px;
+  z-index: 1100;
+  cursor: pointer;
+  background: transparent;
+  border: none;
   font-size: 28px;
-   top: 37.5px;
-   left: 600px;
-  
+  color: white;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 27px;
+
 }
+#languageButton::after {
+  content: "";
+  position: absolute;
+  left: 33%;
+  bottom:1000px;
+  width: 0;
+  height: 30px;
+  background-color: white;
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+  z-index: 1000000;
+}
+
+#languageButton:hover::after {
+  width: 5%;
+}
+
 label{
   width: 30px;
   height: 30px;

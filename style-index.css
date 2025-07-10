@@ -406,6 +406,14 @@ top: 20vh;
   justify-content: space-between;
   margin-left: 20px;
 }
+.overlay-content {
+  background-color: rgba(37, 37, 37, 0.95);
+  padding: 30px 40px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 90vw;
+  width: 400px;
+}
 
 
 
