@@ -12,33 +12,39 @@
   <link rel="icon" href="Screenshot_2025-06-13_160227-removebg-preview.png" type="image/png" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style-index-ita.css"/>
+  <link rel="stylesheet" href="style-index.css"/>
 </head>
 <body>
-
-<!-- Overlay Lingua -->
 
 <div class="top-header">
   <h1>WebBooster</h1>
   <button id="menuButton">Scopri</button>
+
+  <!-- Overlay Menu -->
   <div id="overlayMenu" class="overlay">
-    <nav>
-      <ul>
-        <li><a href="index.html" id="home-sec">Home</a></li>
-        <li><a href="Who-we-are.html" id="whoare-sec">Chi siamo</a></li>
-        <li><a href="Our-works.html" id="our-sec">I nostri lavori</a></li>
-      </ul>
-    </nav>
+    <div class="overlay-content">
+      <nav>
+        <ul>
+          <li><a href="indexIt.html" id="home-sec">Home</a></li>
+          <li><a href="Chi-siamo.html" id="whoare-sec">Chi siamo</a></li>
+          <li><a href="I-nostri-lavori.html" id="our-sec">I nostri lavori</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
-  <button id="languageButton">Lingua</button>
+
+  <a id="languageButton">Lingua</a>
+
+  <!-- Overlay Lingua -->
   <div id="overlayLanguage" class="overlay">
-    <nav>
-      <ul>
-        <li><a href="index.html">English</a></li>
-        <li><a href="indexIt.html">Italiano</a></li>
-        <!-- Puoi aggiungere altre lingue se vuoi -->
-      </ul>
-    </nav>
+    <div class="overlay-content">
+      <nav>
+        <ul>
+          <li><a href="index.html">English</a></li>
+          <li><a href="indexIt.html">Italiano</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </div>
 
@@ -49,36 +55,34 @@
 <div class="purple-shape"></div>
 
 <!-- Titoli -->
-<h2 class="b" id="secondary-title">Crea il tuo sito</h2>
+<h2 class="b" id="secondary-title">Costruisci il tuo sito web</h2>
 <h2 class="w" id="subtitle">Con noi</h2>
 
 <!-- Immagine principale -->
 <img src="Screenshot_2025-06-13_154951-removebg-preview (1).png" alt="Design WebBooster" />
 
-<!-- Rettangolo grafico -->
+<!-- Logo o intestazione -->
 <div class="rettangolo"></div>
 
-<!-- Box contatti -->
-<div class="casella" id="contactMenu">
-  <p class="contattaci" id="contact-us">Contattaci!</p>
-  <p id="our-instagram">
-    Il nostro Instagram:
-    <a
-      href="https://www.instagram.com/web.booster__?igsh=MTN4aWN5dmhmaHppMg%3D%3D&utm_source=qr"
-      target="_blank"
-    >WebBooster</a>
-  </p>
-  <p id="our-phone-number">Numero di telefono: 3383591866</p>
-  <p id="our-email">Email: marketing.webboosters@outlook.com</p>
-</div>
-
-<!-- Motivazione + bottone -->
+<!-- Bottone Get Started -->
 <div class="motivazione-wrapper">
   <p class="frase-moti" id="motto">Creiamo siti fantastici al miglior prezzo</p>
-  <button class="bottone-contattaci" id="contactButton">Inizia ora</button>
+  <button class="bottone-contattaci" id="contactButton">Contattaci</button>
+</div>
+
+<!-- Overlay invisibile per chiudere cliccando fuori -->
+<div class="overlay-blocker" id="overlayBlocker"></div>
+
+<!-- Casella dei contatti -->
+<div class="casella" id="contactMenu">
+  <p><strong>Contattaci!</strong></p>
+  <p>Instagram: <a href="https://www.instagram.com/web.booster__?igsh=MTN4aWN5dmhmaHppMg%3D%3D&utm_source=qr" target="_blank">WebBooster</a></p>
+  <p>Telefono: 3383591866</p>
+  <p>Email: marketing.webboosters@outlook.com</p>
 </div>
 
 <!-- Script -->
 <script src="script.js"></script>
+
 </body>
 </html>
