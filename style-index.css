@@ -339,6 +339,11 @@ h1{
     left: 0vh;
     top: 7vh;
 }
+.overlay-content{
+    max-height: 80vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
 
    .bottone-contattaci {
     position: relative !important;
