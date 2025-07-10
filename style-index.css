@@ -402,24 +402,40 @@ top: 20vh;
     padding: 20px;
     border-radius: 15px;
   }
-  .hamburger {
-  width: 30px;
-  height: 25px;
-  cursor: pointer;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 .overlay-content {
   background-color: rgba(37, 37, 37, 0.95);
-  padding: 30px 40px;
+  padding: 30px 20px;
   border-radius: 15px;
   text-align: center;
   max-width: 90vw;
-  width: 400px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
-
 
 
 }
