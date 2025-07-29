@@ -296,7 +296,7 @@ h1{
   vertical-align: middle; /* allinea bene */
    text-decoration:underline;
    top: -1vh;
-  left: 11vh;
+  left: 13vh;
 }
   .b{
   position: relative !important;
@@ -321,7 +321,7 @@ h1{
     top: 6vh;
   }
   .frase-moti::before {
-  content: "Creiamo siti fantastici \a al miglior prezzo!";
+  content: "Creiamo siti fantastici \a al miglior prezzo!" !important;
   white-space: pre-line;
   display: block;
   color: white;
@@ -435,7 +435,7 @@ top: 20vh;
   margin: 20px 0;
 }
 
-.overlay-content a {
+.overlay-content  {
   color: white;
   font-size: 32px;
   text-decoration: none;
