@@ -200,31 +200,50 @@ img {
   visibility: visible;
 }
 
-.casella {
+.Contattaci{
+  font-size: 30px;
+  font-weight: 500;
+}
+/* Overlay generico */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.612);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   visibility: hidden;
-  position: absolute;
-  width: 700px;
-  height: 400px;
-  top: 500px;
-  left: 900px;
-  background-color: rgba(37, 37, 37, 0.934);
-  font-size: 25px;
-  color: white;
-  font-weight: 500;
-  text-align: center;
-  border-radius: 15px;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 100000;
-  
+  z-index: 99999;
 }
-.casella a {
-  color: #b094e4;
-}
-.casella.show {
+
+.overlay.show {
   opacity: 1;
   visibility: visible;
 }
+
+.overlay-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 23px;
+  text-align: center;
+}
+a{
+  color:#b094e4;
+  
+}
+
 
 nav ul {
   list-style: none;
@@ -415,6 +434,7 @@ top: 20vh;
   z-index: 99999;
 }
 
+
 .overlay.show {
   opacity: 1;
   visibility: visible;
@@ -436,40 +456,52 @@ top: 20vh;
   margin: 20px 0;
 }
 
-.overlay-content a {
-  color: white;
-  font-size: 32px;
-  text-decoration: none;
 
+
+
+.Contattaci{
+  font-size: 30px;
+  font-weight: 500;
 }
-
-.casella {
+/* Overlay generico */
+.overlay {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90vw;
-  max-width: 400px;
-  background-color: rgba(37, 37, 37, 0.95);
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 18px;
-  color: white;
-  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.612);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 99999;
 }
 
-.casella.show {
+.overlay.show {
   opacity: 1;
   visibility: visible;
 }
 
-.casella a {
-  color: #b094e4;
-  text-decoration: underline;
+.overlay-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+.insta{
+  color:#b094e4;
+  font-size: 20px;
+  
 }
 
 .overlay-blocker {

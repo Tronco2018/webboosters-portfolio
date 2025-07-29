@@ -6,13 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlayLanguage = document.getElementById("overlayLanguage");
 
   const contactButton = document.getElementById("contactButton");
-  const contactMenu = document.getElementById("contactMenu");
+  const overlayContact = document.getElementById("overlayContact");
+
   const overlayBlocker = document.getElementById("overlayBlocker");
+  const contactMenu = document.querySelector(".casella");
 
   // Chiude tutti gli overlay
   function closeAllOverlays() {
     overlayMenu?.classList.remove("show");
     overlayLanguage?.classList.remove("show");
+    overlayContact?.classList.remove("show");
     contactMenu?.classList.remove("show");
     overlayBlocker?.classList.remove("active");
   }
@@ -31,12 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!isOpen) overlayLanguage.classList.add("show");
   });
 
-  // Mostra/Nasconde la casella contatti
+  // Contact
   function toggleContactMenu() {
-    const isOpen = contactMenu.classList.contains("show");
+    const isOpen = overlayContact.classList.contains("show");
     closeAllOverlays();
     if (!isOpen) {
-      contactMenu.classList.add("show");
+      overlayContact.classList.add("show");
+      contactMenu?.classList.add("show");
       overlayBlocker?.classList.add("active");
     }
   }
@@ -44,19 +48,20 @@ document.addEventListener("DOMContentLoaded", function () {
   contactButton?.addEventListener("click", toggleContactMenu);
   contactButton?.addEventListener("touchstart", toggleContactMenu);
 
-  // Chiudi cliccando sull'overlay invisibile
+  // Chiudi cliccando sul blocker invisibile
   overlayBlocker?.addEventListener("click", () => {
     closeAllOverlays();
   });
 
-  // Chiudi cliccando fuori da tutti gli overlay
+  // Chiudi cliccando fuori dagli overlay
   document.addEventListener("click", (e) => {
     const isClickInsideOverlay =
       overlayMenu?.contains(e.target) || menuBtn?.contains(e.target) ||
       overlayLanguage?.contains(e.target) || languageButton?.contains(e.target);
 
     const isClickInsideCasella =
-      contactMenu?.contains(e.target) || contactButton?.contains(e.target);
+      overlayContact?.contains(e.target) || contactButton?.contains(e.target) ||
+      contactMenu?.contains(e.target);
 
     if (!isClickInsideOverlay && !isClickInsideCasella) {
       closeAllOverlays();
@@ -68,8 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const banner = document.createElement("div");
     banner.innerHTML = `
       <div style="position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 1rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000;">
-          <span>Questo sito usa cookie tecnici e potenzialmente di terze parti. Continuando accetti la <a href='privacy.html' style='color: #0af;'>privacy policy</a>.</span>
-          <button id="acceptCookies" style="margin-right: 5rem; padding: 0.5rem 1rem; background: #0af; border: none; color: white; cursor: pointer;">Accetto</button>
+        <span>Questo sito usa cookie tecnici e potenzialmente di terze parti. Continuando accetti la <a href='privacy.html' style='color: #0af;'>privacy policy</a>.</span>
+        <button id="acceptCookies" style="margin-right: 5rem; padding: 0.5rem 1rem; background: #0af; border: none; color: white; cursor: pointer;">Accetto</button>
       </div>`;
     document.body.appendChild(banner);
     document.getElementById("acceptCookies").onclick = function () {
