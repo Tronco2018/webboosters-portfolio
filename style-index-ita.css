@@ -178,21 +178,32 @@ img {
   max-height: 80vh;
 }
 
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Contattaci{
+  font-size: 30px;
+  font-weight: 500;
+}
+/* Overlay generico */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.788);
-  backdrop-filter: blur(10px);
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.612);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   visibility: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 99999;
 }
 
 .overlay.show {
@@ -200,32 +211,22 @@ img {
   visibility: visible;
 }
 
-.casella {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  width: 700px;
-  height: 400px;
-  top: 500px;
-  left: 900px;
-  background-color: rgba(37, 37, 37, 0.934);
-  font-size: 25px;
+.overlay-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   color: white;
-  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 23px;
   text-align: center;
-  border-radius: 15px;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 100000;
+}
+a{
+  color:#b094e4;
   
 }
-.casella a {
-  color: #b094e4;
-}
-.casella.show {
-  opacity: 1;
-  visibility: visible;
-}
-
 nav ul {
   list-style: none;
   padding: 0;
@@ -441,33 +442,49 @@ top: 20vh;
 
 }
 
-.casella {
+.Contattaci{
+  font-size: 30px;
+  font-weight: 500;
+}
+/* Overlay generico */
+.overlay {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90vw;
-  max-width: 400px;
-  background-color: rgba(37, 37, 37, 0.95);
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 18px;
-  color: white;
-  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.612);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 99999;
 }
 
-.casella.show {
+.overlay.show {
   opacity: 1;
   visibility: visible;
 }
 
-.casella a {
-  color: #b094e4;
-  text-decoration: underline;
+.overlay-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+.insta{
+  color:#b094e4;
+  font-size: 20px;
+  
 }
 
 .overlay-blocker {
