@@ -566,6 +566,12 @@ margin-top: -3vw;
   position: absolute;
   top:-3.5625vw; /* 30px */
 }
+.ing{
+  font-size: 7vw;
+}
+.ita{
+  font-size: 7vw;
+}
 
 .js {
   font-size: 2.498vw; /* 23px */

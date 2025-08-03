@@ -698,6 +698,12 @@ margin-top: -3vw;
   width: 16vw;
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
+.ing{
+  font-size: 7vw;
+}
+.ita{
+  font-size: 7vw;
+}
 
 .lampadina {
   display: block;
