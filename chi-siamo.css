@@ -850,11 +850,10 @@ option {
   opacity: 1;
   visibility: visible;
 }
-.home{
-  font-size: 7vw;
-}
-.chis{
-  font-size: 7vw;
+.home, .chis {
+  font-size: 8vw; /* o un valore maggiore, tipo 10vw */
+  font-weight: 700;
+  color: white;
 }
 
 .overlay-content {
