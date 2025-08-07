@@ -83,3 +83,10 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 });
+
+  document.querySelectorAll('.close-overlay').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.parentElement.style.display = 'none';
+    });
+  });
+
