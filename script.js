@@ -89,4 +89,3 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.parentElement.style.display = 'none';
     });
   });
-
