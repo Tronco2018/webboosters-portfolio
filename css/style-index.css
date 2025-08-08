@@ -3,18 +3,13 @@
 body {
   width: 100%;
   min-height: 100vh;
-<<<<<<< HEAD
   background-color: rgba(40,25,54,255);
-=======
-  background-color:#EFF9FB;
->>>>>>> f3e502128cc48baec81eddf27824425528906c94
   overflow-x: hidden;
   position: relative;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 }
-<<<<<<< HEAD
 
 .purple-shape, .shape, .cerchio-1, .cerchio-2 {
   position: absolute;
@@ -546,16 +541,6 @@ top: 20vh;
 }
 
 }
-=======
-.immagine_menu{
-  height: 500px;
-  width: 500px;
-  color: #000000;
-  left: 10px;
-  z-index: -9999;
-}
-
->>>>>>> f3e502128cc48baec81eddf27824425528906c94
 
 @keyframes slideFromLeft {
   from { transform: translateX(-100%); opacity: 0; }
