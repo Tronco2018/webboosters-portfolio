@@ -85,6 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 document.querySelectorAll('.close-overlay').forEach(btn => {
   btn.addEventListener('click', () => {
-    closeAllOverlays();
+    // Chiude solo l'overlay specifico (genitore diretto)
+    btn.closest(".overlay")?.classList.remove("show");
+    document.getElementById("overlayBlocker")?.classList.remove("active");
   });
 });
