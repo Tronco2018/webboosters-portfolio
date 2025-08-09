@@ -1,0 +1,153 @@
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color:#EFF9FB;
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#menuButton{
+  left: 550px;
+  position: absolute;
+  font-size: 2.5vh;
+  top: 65px;
+  background-color: transparent;
+  border: none;
+  font-family: Lato;
+  font-weight: bold;
+}
+#ChiSiamoButton{
+    left: 700px;
+  position: absolute;
+  font-size: 2.5vh;
+  top: 65px;
+  background-color: transparent;
+  border: none;
+  font-family: Lato;
+  font-weight: bold;
+}
+.bottone-contattaci{
+  background-color: #bb4922;
+  border: none;
+  font-family:Lato Bold ;
+  font-weight: 500;
+  border-radius:30px;
+  width: 25vh;
+  height: 8vh;
+  font-size: 4vh;
+  color: rgb(255, 255, 255);
+  top: 700px;
+  position: absolute;
+  left: 920px;
+}
+
+#motto{
+  font-family:Playfair Display;
+  font-weight:700;
+  position:absolute;
+  color: #052335;
+  font-size: 7vh;
+  left:900px;
+  top: 150px;
+}
+.discorso{
+  font-family: Merriweather;
+  top: 380px;
+  position:absolute;
+  max-width: 600px;
+  font-size: 2vh;
+  font-weight: 500;
+  left:900px;
+  line-height: 30px;
+}
+
+.titolo{
+    font-family:Playfair Display;
+  font-weight:550;
+  font-size: 5.6vh;
+  left: 50px;
+  position: absolute;
+  color: #052335;
+}
+.img{
+position:absolute;
+  top: 100px;
+  left: 50px;
+  width: 90vh;
+}
+.due{
+  font-family:Playfair Display;
+  font-weight:550;
+  font-size: 7.5vh;
+  left: 350px;
+  position: absolute;
+  color: #052335;
+  top: -30px;
+  
+}
+.modal {
+    display: none; /* nascosto di default */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.623);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    font-family: 'Merriweather', serif;
+    color: #052335;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+.close:hover {
+    color: black;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin: 8px 0;
+}
+.contact-info a {
+    color: #18476b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.map {
+    width: 100%;
+    height: 200px;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: none;
+}
+
+.hours table {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 10px;
+    border-collapse: collapse;
+    font-weight: 600;
+}
+.hours td {
+    padding: 4px 0;
+    font-weight: 600
+}

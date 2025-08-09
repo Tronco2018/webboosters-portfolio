@@ -1,0 +1,133 @@
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color:#EFF9FB;
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#menuButton{
+  left: 550px;
+  position: absolute;
+  font-size: 2.5vh;
+  top: 65px;
+  background-color: transparent;
+  border: none;
+  font-family: Lato;
+  font-weight: bold;
+}
+#ChiSiamoButton{
+    left: 700px;
+  position: absolute;
+  font-size: 2.5vh;
+  top: 65px;
+  background-color: transparent;
+  border: none;
+  font-family: Lato;
+  font-weight: bold;
+}
+
+
+#motto{
+  font-family:Playfair Display;
+  font-weight:700;
+  position:absolute;
+  color: #052335;
+  font-size: 9vh;
+  left:500px;
+  top: 150px;
+}
+
+
+.titolo{
+    font-family:Playfair Display;
+  font-weight:550;
+  font-size: 5.6vh;
+  left: 50px;
+  position: absolute;
+  color: #052335;
+}
+
+.due{
+  font-family:Playfair Display;
+  font-weight:550;
+  font-size: 7.5vh;
+  left: 350px;
+  position: absolute;
+  color: #052335;
+  top: -30px;
+  
+}
+.cerchio-1 {
+  width: 70vh;
+  height: 70vh;
+  background-color: #50a6c1;
+  left: 1100px;
+  top: -200px;
+  border-radius: 50%;
+  clip-path: inset(200px 50px 0 0px);
+  animation: slideFromTop 1.6s ease-out;
+  position: absolute
+}
+/* Contenitore decorazioni */
+.decorazioni {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 200px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Stella animata */
+.stella-animata {
+  position: absolute;
+  bottom: 10;
+  left: -50px;
+  animation: entraRuotando 1.6s ease-out forwards;
+  will-change: transform;
+}
+
+/* Stella */
+.stella-composita {
+  position: relative;
+  width: 20vh;
+  height: 20vh;
+  top: -650px;
+}
+
+/* Triangolo */
+.triangolo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35vh;
+  height: 35vh;
+  background: #18486b;
+  clip-path: polygon(0% 0%, 0% 250%, 150% 100%);
+}
+
+/* Animazione */
+@keyframes entraRuotando {
+  0% {
+    transform: translateX(-270px) rotate(360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(170deg);
+    opacity: 1;
+  }
+}
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
