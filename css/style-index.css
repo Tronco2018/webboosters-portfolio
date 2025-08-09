@@ -1,0 +1,40 @@
+/* CSS completo aggiornato per layout desktop e mobile correttamente funzionante */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color:#EFF9FB;
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.immagine_menu{
+  height: 500px;
+  width: 500px;
+  color: #000000;
+  left: 10px;
+  z-index: -9999;
+}
+
+
+@keyframes slideFromLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideFromTop {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideFromright {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideFrombottom {
+  from { transform: translateY(100%); opacity: 1; }
+  to   { transform: translateY(0); opacity: 1; }
+}
