@@ -7,10 +7,10 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@400;700&family=Italianno&family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@600&family=Lato:wght@400;700&family=Merriweather:wght@400&display=swap" rel="stylesheet">
 
   <!-- Icona -->
-  <link rel="icon" href="immagini/icona pizzeria.png" type="image/png" />
+  <link rel="icon" href="immagini/immagine.png" type="image/png" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style-index.css"/>
@@ -19,32 +19,55 @@
 
 
 <div class="top-header">
-    <h1>Marinelli<br>2.0 </h1>
-    <button id="ChiSiamoButton">Chi siamo</button>
-    <button id="menuButton">Menù</button>
+    <h1 class="titolo">MARINELLI</h1>
+    <h1 class="due">2.0</h1>
+    <button href="html/chi-siamo.html" id="ChiSiamoButton">Chi siamo</button>
+    <button href="html/menu.html" id="menuButton">Menù</button>
+    <p class="discorso">Se pensi che la pizza sia solo un piatto, è perché non hai ancora provato quella della Pizzeria Marinelli 2.0. Ogni fetta è una promessa di qualità: impasto soffice e croccante, ingredienti freschi e una passione che si sente in ogni morso. Che tu scelga la classica Margherita o una delle loro specialità come 'O' Vesuvio' o 'Salsiccia e Friarielli', ogni pizza è un viaggio nei sapori autentici della tradizione napoletana. Non è solo mangiare, è vivere un'esperienza. Vieni a scoprire perché la pizza è più di un piatto: è un'emozione da condividere.</p>
 
 
 <div class="immagine_menu"></div>
  
 
   <!-- Titoli -->
-  <h2 class="b" id="secondary-title">Pulcinella approva, tu pure.<br>La pizza che ti fa sentire a casa.</h2>
+  <h2 class="b" id="motto">LA PIZZA CHE TI FA<br>SENTIRE A CASA</h2>
   
 
   <!-- Immagine principale -->
-  <img src="immagini/immagine-sfondo.png" alt="WebBooster design" />
+  <img class="img" src="immagini/immagine.png" alt="WebBooster design" />
 
   
   <!-- Bottone Get Started -->
 <div class="motivazione-wrapper">
-  <button class="bottone-contattaci" id="contactButton">ordina</button>
+  <button class="bottone-contattaci" id="contactButton">ORDINA</button>
+</div>
+
+<!-- Modale -->
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <h2>Ordina la tua pizza</h2>
+
+    <div class="contact-info">
+      <p >📞 <a href="tel:+393892874539">+39 3892874539</a></p>
+      <p>📍 <a class="via" href="https://www.google.com/maps/place/Pizzeria+Da+Marinelli+2.0/@45.8065514,13.5156767,17z/data=!3m1!4b1!4m6!3m5!1s0x477ba73535a04d5d:0x20d35cdc477c9dd2!8m2!3d45.8065477!4d13.5182516!16s%2Fg%2F11rx8n3fwz?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Via Terenziana, 58, 34074 Monfalcone GO</a></p>
+    </div>
+
+    <!-- Mappa -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.2350193239768!2d13.515676676632856!3d45.80655141053091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477ba73535a04d5d%3A0x20d35cdc477c9dd2!2sPizzeria%20Da%20Marinelli%202.0!5e0!3m2!1sen!2sit!4v1754755484706!5m2!1sen!2sit" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="hours">
+      <h3>Orari di apertura</h3>
+      <table>
+        <tr><td>mar - dom:</td><td>18:00 - 22:00  </td></tr>
+        <tr><td>sab:</td><td>18:00 - 22:30</td></tr>
+        <td>lunedi chiuso</td>
+      </table>
+    </div>
+  </div>
 </div>
 
 <script src="script.js"></script>
 
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> f3e502128cc48baec81eddf27824425528906c94
+
