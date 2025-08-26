@@ -273,18 +273,18 @@ top: 0.12vw; /* 10px */
 #languageButton::after {
   content: "";
   position: absolute;
-  left: 33%;
-  bottom: 52.083vw; /* 1000px */
+  left: 50.3%;
+  bottom: -3px;
   width: 0;
-  height: 1.562vw; /* 30px */
+  height: 3px;
   background-color: white;
   transform: translateX(-50%);
   transition: width 0.4s ease;
-  z-index: 1000000;
+  z-index: -1;
 }
 
 #languageButton:hover::after {
-  width: 5%;
+  width: 100.5%;
 }
 
 label {

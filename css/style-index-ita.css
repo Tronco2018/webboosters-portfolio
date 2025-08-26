@@ -88,8 +88,8 @@ h1 {
 #menuButton::after {
   content: "";
   position: absolute;
-  left: 50%;
-  bottom: -2px;
+  left: 27.8%;
+  bottom: 800px;
   width: 0;
   height: 3px;
   background-color: white;
@@ -99,7 +99,7 @@ h1 {
 }
 
 #menuButton:hover::after {
-  width: 100%;
+  width: 5%;
 }
 
 #languageButton {
@@ -114,8 +114,8 @@ h1 {
 #languageButton::after {
   content: "";
   position: absolute;
-  left: 50%;
-  bottom: -2px;
+  left: 33.3%;
+  bottom: 800px;
   width: 0;
   height: 3px;
   background-color: white;
@@ -125,7 +125,7 @@ h1 {
 }
 
 #languageButton:hover::after {
-  width: 100%;
+  width: 4.5%;
 }
 
 .b, .w {
