@@ -270,23 +270,6 @@ top: 0.12vw; /* 10px */
   margin-top: 1.406vw; /* 27px */
 }
 
-#languageButton::after {
-  content: "";
-  position: absolute;
-  left: 50.3%;
-  bottom: -3px;
-  width: 0;
-  height: 3px;
-  background-color: white;
-  transform: translateX(-50%);
-  transition: width 0.4s ease;
-  z-index: -1;
-}
-
-#languageButton:hover::after {
-  width: 100.5%;
-}
-
 label {
   width: 1.562vw; /* 30px */
   height: 1.562vw; /* 30px */
@@ -311,22 +294,6 @@ option {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#menuButton::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -0.104vw; /* -2px */
-  width: 0;
-  height: 0.156vw; /* 3px */
-  background-color: white;
-  transform: translateX(-50%);
-  transition: width 0.4s ease;
-  z-index: -1;
-}
-
-#menuButton:hover::after {
-  width: 100%;
-}
 
 .overlay {
   position: fixed;

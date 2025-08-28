@@ -84,22 +84,7 @@ h1 {
   margin-left: 30px;
 }
 
-#menuButton::after {
-  content: "";
-  position: absolute;
-  left: 28.7%;
-  bottom: 800px;
-  width: 0;
-  height: 3px;
-  background-color: white;
-  transform: translateX(-50%);
-  transition: width 0.4s ease;
-  z-index: -1;
-}
 
-#menuButton:hover::after {
-  width: 7%;
-}
 
 #languageButton {
   font-size: 25px;
@@ -110,22 +95,7 @@ h1 {
   cursor: pointer;
   display: inline-block;
 }
-#languageButton::after {
-  content: "";
-  position: absolute;
-  left: 36.3%;
-  bottom: 800px;
-  width: 0;
-  height: 3px;
-  background-color: white;
-  transform: translateX(-50%);
-  transition: width 0.4s ease;
-  z-index: -1;
-}
 
-#languageButton:hover::after {
-  width: 6.5%;
-}
 
 .b, .w {
   position: absolute;
