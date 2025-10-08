@@ -48,7 +48,7 @@ a {
   border-radius: 15px;
   width: 100px;
   text-align: center;
-  height: 40px;
+  height: auto;
   font-weight: 500;
   background-color: #7054a4;
   border: 0;
@@ -56,6 +56,9 @@ a {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   font-family: 'Segoe UI', sans-serif;
+  text-decoration: none;
+  padding-top:4px;
+  padding-bottom:4px;
 }
 
 /* ==== STILE MOBILE ==== */
